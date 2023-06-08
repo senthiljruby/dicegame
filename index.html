@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/dice.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="dice-game-result">Dice Game</h1>
+        <p>Roll the dice and see who wins!</p>
+        <div class="dice-container"></div>
+        <div class="bottom">
+            <button class="butn" onclick="rollTheDice()">Roll the Dice</button>
+            <button class="butn" onclick="initialize()">Reset</button>
+        </div>
+        <div class="win-track-container active">
+            <h2>Win Track (Table View)</h2>
+            <div class="toggle-view-container">
+                <button class="butn toggle-view-button" onclick="toggleView()">Toggle View</button>
+            </div>
+            <table class="win-track-table">
+                <tr>
+                    <th>Player</th>
+                    <th>Wins</th>
+                </tr>
+            </table>
+        </div>
+        <div class="chart-container">
+            <h2>Win Track (Chart View)</h2>
+            <div class="toggle-view-container">
+                <button class="butn toggle-view-button" onclick="toggleView()">Toggle View</button>
+            </div>
+            <canvas id="barChart"></canvas>
+            <canvas id="pieChart"></canvas>
+        </div>
+
+    </div>
+
+    <script>
+        initialize();
+    </script>
+</body>
+
+</html>
